@@ -1,39 +1,9 @@
-# CoverageDetector
+# Coverage Detector: a quick way to understand the time coverage for each unit
 
-Welcome to ProjectTemplate!
+Working with panel datasets requires researchers to understand the time coverage for each variable for each unit. For instance, if you want to run some regressions with a couple of control variables, you have to understand how the data coverage for each variable look like. At the same time, it might also be reasonable to exclude units completely when their data coverage is too weak across multiple variables. The function enables you to understand the data coverage by unit and time in an intuitive way. 
 
-This file introduces you to ProjectTemplate, but you should eventually replace
-the contents of this file with an introduction to your project. People who
-work with your data in the future will thank you for it, including your future
-self.
+	source('src/CoverageDetector.R')
+	example <- read_dta("data/example.dta")
+	coverage_df <- TimeCoverageDetector(df = example, unit_var = 'country', time_var = 'year')
 
-ProjectTemplate is an R package that helps you organize your statistical
-analysis projects. Since you're reading this file, we'll assume that you've
-already called `create.project()` to set up this project and all of its
-contents.
-
-To load your new project, you'll first need to `setwd()` into the directory
-where this README file is located. Then you need to run the following two
-lines of R code:
-
-	library('ProjectTemplate')
-	load.project()
-
-After you enter the second line of code, you'll see a series of automated
-messages as ProjectTemplate goes about doing its work. This work involves:
-* Reading in the global configuration file contained in `config`.
-* Loading any R packages you listed in the configuration file.
-* Reading in any datasets stored in `data` or `cache`.
-* Preprocessing your data using the files in the `munge` directory.
-
-Once that's done, you can execute any code you'd like. For every analysis
-you create, we'd recommend putting a separate file in the `src` directory.
-If the files start with the two lines mentioned above:
-
-	library('ProjectTemplate')
-	load.project()
-
-You'll have access to all of your data, already fully preprocessed, and
-all of the libraries you want to use.
-
-For more details about ProjectTemplate, see http://projecttemplate.net
+The output might also be a good visualization for your descriptive part in your paper.
