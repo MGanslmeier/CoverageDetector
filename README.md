@@ -1,6 +1,6 @@
 # Coverage Detector: a quick way to understand the time coverage for each unit
 
-Working with panel datasets requires researchers to understand the time coverage for each variable for each unit. For instance, if you want to run some regressions with a couple of control variables, you have to understand how the data coverage for each variable look like. At the same time, it might also be reasonable to exclude units completely when their data coverage is too weak across multiple variables. The function enables you to understand the data coverage by unit and time in an intuitive way. 
+Working with panel datasets requires researchers to understand the time coverage for each variable for each unit. Usually, scholars only want to include variables in their regressions that show fairly good time and unit coverage, so that the sample does not loose its representative power. Thus, one might want to check which variables (and which units) have enough data points before they run any inference. The function enables you to understand this in an intuitive way. 
 
 	source('src/CoverageDetector.R')
 	example <- read_dta("data/example.dta")
