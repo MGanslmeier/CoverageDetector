@@ -6,4 +6,4 @@ Working with panel datasets requires researchers to understand the time coverage
 	example <- read_dta("data/example.dta")
 	coverage_df <- TimeCoverageDetector(df = example, unit_var = 'country', time_var = 'year')
 
-The output might also be a good visualization for your descriptive part in your paper.
+The output might also be a good visualization for the descriptive part in your paper.
